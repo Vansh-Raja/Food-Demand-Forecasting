@@ -1,0 +1,37 @@
+<!-- result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preprocessing Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Preprocessed Dataset</h2>
+        {{ preprocessed_data|safe }}
+
+        <!-- Download Buttons -->
+        <div class="mt-4">
+            <a href="{{ url_for('download_csv', filename='train.csv') }}" class="btn btn-success btn-lg mr-2">
+                Download Train Data
+            </a>
+            <a href="{{ url_for('download_csv', filename='test.csv') }}" class="btn btn-success btn-lg mr-2">
+                Download Test Data
+            </a>
+            <a href="{{ url_for('download_csv', filename='complete_dataset.csv') }}" class="btn btn-success btn-lg">
+                Download Complete Dataset
+            </a>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS (Optional, for enhanced functionality) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
