@@ -1,0 +1,28 @@
+schema: '2.0'
+stages:
+  extract:
+    cmd: python scripts/extract.py
+    outs:
+    - path: data/raw/train1.csv
+      hash: md5
+      md5: f5a0625373d630319f3af9c86a3f603c
+      size: 819066
+  transform:
+    cmd: python scripts/transform.py
+    deps:
+    - path: data/raw/train1.csv
+      hash: md5
+      md5: f5a0625373d630319f3af9c86a3f603c
+      size: 819066
+    outs:
+    - path: data/processed/preprocessed_data.csv
+      hash: md5
+      md5: 1434abdf64866ab5bcaab39ba92e26c6
+      size: 1757293
+  load:
+    cmd: python scripts/load.py
+    deps:
+    - path: data/processed/preprocessed_data.csv
+      hash: md5
+      md5: 1434abdf64866ab5bcaab39ba92e26c6
+      size: 1757293
