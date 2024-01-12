@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Vansh/Projects/Gryffindor-Internship/mlruns/0/6342c15a503c4e92af539468291b904b/artifacts
+end_time: 1705094714989
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6342c15a503c4e92af539468291b904b
+run_name: suave-horse-185
+run_uuid: 6342c15a503c4e92af539468291b904b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705094302632
+status: 4
+tags: []
+user_id: UrAvgProGamer

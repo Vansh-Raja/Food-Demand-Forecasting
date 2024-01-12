@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Vansh/Projects/Gryffindor-Internship/mlruns/0/a234838d6b8545f3be19153b41a5effa/artifacts
+deleted_time: 1705094146583
+end_time: 1705094065570
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: a234838d6b8545f3be19153b41a5effa
+run_name: rare-moose-106
+run_uuid: a234838d6b8545f3be19153b41a5effa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705093379792
+status: 4
+tags: []
+user_id: UrAvgProGamer
