@@ -1,0 +1,10 @@
+schema: '2.0'
+stages:
+  extract:
+    cmd: python3 extract.py
+    outs:
+    - path: final_data_dvc/food.csv
+      hash: md5
+      md5: a2a638e662f5d4a163e95dcde69b1436.dir
+      size: 34712376
+      nfiles: 8
