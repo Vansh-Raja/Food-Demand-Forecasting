@@ -1,5 +1,0 @@
-stages:
-  extract:
-    cmd: python3 extract.py
-    outs:
-    - final_data_dvc/food.csv
