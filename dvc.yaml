@@ -9,6 +9,12 @@ stages:
     - data/raw/train1.csv
     outs:
     - data/processed/preprocessed_data.csv
+  train:
+    cmd: python scripts/train.py 4
+    deps:
+    - data/processed/preprocessed_data.csv
+    outs:
+    - data/models/model.pkl
   load:
     cmd: python scripts/load.py
     deps:
