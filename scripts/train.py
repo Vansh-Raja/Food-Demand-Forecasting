@@ -146,6 +146,8 @@ models = {
 def train_model(model_id):
     
     if model_id in models:
+
+        #If a run is acive, end the run.
         if mlflow.active_run():
             mlflow.end_run()
         print(f"Training Model {models[model_id]}.")
