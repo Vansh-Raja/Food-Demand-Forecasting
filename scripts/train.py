@@ -1,5 +1,3 @@
-### Temporary Code till def RandomForestRegressor()
-
 # Importing the libraries
 import pandas as pd
 import numpy as np
@@ -19,9 +17,7 @@ import mlflow.sklearn
 import sys
 import joblib
 
-df = pd.read_csv("D:/Study/INTERNSHIP/ETL1/data/processed/preprocessed_data.csv")
-
-mlflow.set_tracking_uri(uri="http://127.0.0.1:8080")
+df = pd.read_csv("scripts/preprocessed_data.csv")                                                                                       ,,,
 
 #Splitting and Feature Selection
 X=df.drop(columns=['num_orders'],axis=1)
@@ -146,10 +142,17 @@ models = {
 def train_model(model_id):
     
     if model_id in models:
-        if mlflow.active_run():
-            mlflow.end_run()
-        print(f"Training Model {models[model_id]}.")
-        with mlflow.start_run():
+        
+        model_name = models[model_id].__name__
+        
+        #Setting the tracking uri and experiment for the sqlite db
+        mlflow.set_tracking_uri("http://localhost:5001")
+        mlflow.set_experiment(model_name)
+        
+        with mlflow.start_run() as run:
+            
+            print(f"Training Model {model_name}.")
+        
             # Executes the corresponding model function
             model = models[model_id]()
             model.fit(X_train, Y_train)
@@ -158,16 +161,27 @@ def train_model(model_id):
             mse = mean_squared_error(Y_test, y_pred)
             print(f"Mean Squared Error: {mse}")
             
+            # Logging the parameters and metrics
             mlflow.log_params(model.best_params_)
             mlflow.log_metric("mse", mse)
-            mlflow.sklearn.log_model(model.best_estimator_, models[model_id].__name__)
-
-            #Save the model as pkl file
-            model_path = f"D:/Study/INTERNSHIP/ETL1/data/models/model.pkl"
-            joblib.dump(model.best_estimator_, model_path)
+            
+            mlflow.sklearn.log_model(model.best_estimator_, f"{model_name}", registered_model_name = model_name)
 
     else:
         print(f"Invalid model_id: {model_id}")
 
-model_id = sys.argv[1]
-train_model(int(model_id))
+#Creating a generic function to log mlflow model       
+def create_and_register(model, metrics, params, model_name):
+    
+    with mlflow.start_run() as run:
+        
+            
+        mlflow.sklearn.log_model(model, f"{model_name}", registered_model_name = model_name)
+        
+        #Save the model as pkl file
+        model_path = "/Users/Vansh/Code/Projects/Gryffindor-Internship/models"
+        joblib.dump(model.best_estimator_, model_path)
+
+model_id = 6
+# model_id = sys.argv[1]
+experiment_name = train_model(int(model_id))
