@@ -142,6 +142,8 @@ models = {
 def train_model(model_id):
     
     if model_id in models:
+
+        #If a run is acive, end the run.
         
         model_name = models[model_id].__name__
         
@@ -170,18 +172,5 @@ def train_model(model_id):
     else:
         print(f"Invalid model_id: {model_id}")
 
-#Creating a generic function to log mlflow model       
-def create_and_register(model, metrics, params, model_name):
-    
-    with mlflow.start_run() as run:
-        
-            
-        mlflow.sklearn.log_model(model, f"{model_name}", registered_model_name = model_name)
-        
-        #Save the model as pkl file
-        model_path = "/Users/Vansh/Code/Projects/Gryffindor-Internship/models"
-        joblib.dump(model.best_estimator_, model_path)
-
-model_id = 6
-# model_id = sys.argv[1]
-experiment_name = train_model(int(model_id))
+model_id = sys.argv[1]
+train_model(int(model_id))
