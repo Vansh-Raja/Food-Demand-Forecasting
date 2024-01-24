@@ -1,5 +1,3 @@
-### Temporary Code till def RandomForestRegressor()
-
 # Importing the libraries
 import pandas as pd
 import numpy as np
@@ -141,6 +139,7 @@ models = {
         5: DecisionTreeRegressor,
         6: ExtraTreesRegressor,
         7: AdaBoostRegressor,
+        
     }
 
 
