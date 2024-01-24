@@ -22,7 +22,7 @@ import joblib
 
 df = pd.read_csv("D:/Study/INTERNSHIP/ETL1/data/processed/preprocessed_data.csv")
 
-mlflow.set_tracking_uri(uri="http://127.0.0.1:8080")
+mlflow.set_tracking_uri(uri="http://0.0.0.0/5000")
 
 #Splitting and Feature Selection
 X=df.drop(columns=['num_orders'],axis=1)

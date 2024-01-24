@@ -1,0 +1,4 @@
+Flask
+scikit-learn
+mlflow
+category-encoders

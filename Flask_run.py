@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 mlflow.set_tracking_uri(uri="http://127.0.0.1:8080")
 
+@app.route('/',methods=['GET'])
+def index():
+    return "Hello World"
+
 @app.route('/predict',methods=['POST'])
 def predict():
     try:
@@ -23,5 +27,5 @@ def predict():
         return jsonify({"error": str(e)}), 400
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0",port=5050)
     
