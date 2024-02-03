@@ -1,24 +1,70 @@
-# RabbitMQ
+# Index
+
+- [Real-Time Messaging Queue System](#real-time-messaging-queue-system)
+    - [RabbitMQ](#rabbitmq)
+        - [RabbitMQConfig.java](#rabbitmqconfigjava)
+        - [RabbitMQProducer.java](#rabbitmqproducerjava)
+        - [RabbitMQConsumer.java](#rabbitmqconsumerjava)
+        - [MessageController.java](#messagecontrollerjava)
+        - [SpringbootRabbitmqTutorialApplication.java](#springbootrabbitmqtutorialapplicationjava)
+        - [docker-compose.yml](#docker-composeyml)
+        - [Running RabbitMQ](#running-rabbitmq)
+    - [Kafka](#kafka)
+        - [db producer final.ipynb](#db-producer-finalipynb)
+        - [db consumer final.ipynb](#db-consumer-finalipynb)
+        - [spinning kafka.txt](#spinning-kafkatxt)
+        - [Running Kafka](#running-kafka)
+
+## Real-Time Messaging Queue System
+
+We explored RabbitMQ and Kafka in the project as real-time messaging systems.
+
+## RabbitMQ
 
 This repository contains code for a Spring Boot application that demonstrates how to use RabbitMQ for message queuing.
 
-## RabbitMQConfig.java
+### RabbitMQConfig.java
+
 This file contains the configuration for RabbitMQ. It defines the queue, exchange, and routing key using values from the application's properties file. It also sets up the binding between the queue and the exchange using the routing key.
 
-## RabbitMQProducer.java
+### RabbitMQProducer.java
+
 This service is responsible for sending messages to RabbitMQ. It uses the RabbitTemplate to send messages to the exchange with the specified routing key.
 
-## RabbitMQConsumer.java
+### RabbitMQConsumer.java
+
 This service listens for messages on the RabbitMQ queue. When a message arrives, it logs the message to the console.
 
-## MessageController.java
+### MessageController.java
+
 This controller exposes an endpoint that allows you to send messages to RabbitMQ. It uses the RabbitMQProducer to send the messages.
 
-## SpringbootRabbitmqTutorialApplication.java
+### SpringbootRabbitmqTutorialApplication.java
+
 This is the entry point of the Spring Boot application. It runs the application and sets up the Spring context.
 
-## docker-compose.yml
+### docker-compose.yml
+
 This file is used to set up a Docker container for RabbitMQ. It specifies the image to use, the ports to expose, and any environment variables needed by RabbitMQ.
 
-## Running RabbitMQ
+### Running RabbitMQ
+
 To run the application, you need to start RabbitMQ (using Docker or a local installation), then run the Spring Boot application. You can then send messages to RabbitMQ by making a GET request to `http://localhost:8080/api/v1/publish?message=hello`. The message will be logged to the console by the RabbitMQConsumer.
+
+## Kafka
+
+### db producer final.ipynb
+
+This Jupyter notebook contains the code for producing messages to a Kafka topic. It configures a Kafka producer with the necessary settings and sends messages to a specified Kafka topic.
+
+### db consumer final.ipynb
+
+This Jupyter notebook contains the code for consuming messages from a Kafka topic. It configures a Kafka consumer to listen to a specified Kafka topic and processes the incoming messages.
+
+### spinning kafka.txt
+
+This text file contains the commands for starting the Kafka and Zookeeper servers, creating a Kafka topic, and starting the Kafka producer and consumer from the command line.
+
+### Running Kafka
+
+To run Kafka, you need to start the Zookeeper and Kafka servers, create a Kafka topic, and start the Kafka producer and consumer. The commands for these operations are provided in the spinning kafka.txt file.
