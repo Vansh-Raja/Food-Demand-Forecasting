@@ -1,6 +1,6 @@
-# Gryffindor-Internship
+# Databases - Structured and Unstructured Database
 
-Using MongoDB and Sqlite for datapipeline, later using dvc for displaying the pipeline
+We tried and tested both MongoDB and SQlite for our project, searching for the best method to store data for our needs. We ended up using MongoDB and Sqlite for datapipeline, later using dvc for displaying the pipeline
 
 ## Requirements
 The Libraries used in this part of the project include:
