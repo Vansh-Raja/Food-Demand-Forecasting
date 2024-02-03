@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 65vh
+        }
+
+        .main-section {
+            flex: 2;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .sub-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 15%;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            max-height: 100%; /* Set a maximum height for each image (half of the sub-section height) */
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .subway {
+            height: 100%;
+            
+        }
+
+        .roll1 {
+            height: 50%;
+            
+        }
+
+        .roll2 {
+            height: 50%;
+        }
+
+        /* Added styling for text */
+        .text-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .text-container p {
+            width: 48%; /* Adjust the width as needed */
+            margin: 0;
+        }
+
+        .main-name {
+            font-weight: bold;
+            font-size: 45px;
+            margin-top: 20px;
+            margin-left: 15px;
+            font-family: 'Rag 123', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .detail1 {
+            font-size: 15px;
+            margin-left: 15px;
+            font-family: 'Rag 123', sans-serif;
+        }
+
+        .detail2 {
+            font-size: 15px;
+            margin-top: -10px;
+            margin-left: 15px;
+            font-family: 'Rag 123', sans-serif;
+            color: grey;
+        }
+
+        .rating {
+            font-size: 25px;
+            margin-left: 170px;
+            margin-top: -22px;
+            font-family: 'Rag 123', sans-serif;
+        }
+
+        .order {
+            font-weight: bold;
+            font-size: 35px;
+            margin-top: 75px;
+            margin-left: 15px;
+            font-family: 'Rag 123', sans-serif;
+        }
+
+        .rectangular-boxes{
+            margin-top: 50px 
+        }
+        .rectangular-box {
+            width: 306px;
+            height: 300px;
+            background-color: grey;
+            margin-bottom: 75px;
+            margin-left: 15px;
+            border-radius: 20px;
+            background-size: contain;
+            background-position: center;
+        }
+        
+        .subway:hover,
+        .roll1:hover,
+        .roll2:hover{
+            transform: scale(1.1); 
+            
+            
+            
+        }
+
+        
+        .subway:hover,
+        .roll1:hover,
+        .roll2:hover {
+            filter: brightness(1.2); /* Increase brightness by 20% */
+        }
+        
+    </style>
+    <title>Your Page</title>
+</head>
+<body>
+
+<div class="container">
+    <span class="main-section">
+        <img src="subway-big.avif" class="subway" alt="Subway Big Image">
+    </span>
+    <span class="sub-section">
+        <img src="roll1.avif" class="roll1" alt="Roll 1 Image">
+        <img src="roll2.avif" class="roll2" alt="Roll 2 Image">
+    </span>
+</div>
+<div class="mid-details">
+    <p class="main-name">Subway</p>
+    <p class="detail1">Healthy Food,Sandwich,Fast Food,Beverages,Wraps</p>
+    <p class="detail2">Connaught Place, New Delhi</p>
+</div>
+
+<div>
+    <p class="order">Order Online</p>
+</div>
+
+
+<div class="rectangular-boxes">
+    <div>
+        <div class="rectangular-box" style="background-image: url('dish1.avif');"></div>
+        <div>
+            
+        </div>
+        <div>
+            Delhi Tikki Sandwich + Side + coke
+        </div>
+        <div>
+            Rs 279
+        </div>
+        <div>
+            Enjoy your favourite grills sandwich with a choice of drink and a cookie...
+        </div>
+        <div>
+            read more
+        </div>
+        
+    </div>
+    <div>
+        <div class="rectangular-box" style="background-image: url('dish2.avif');"></div>
+    </div>
+    <div>
+        <div class="rectangular-box" style="background-image: url('dish3.avif');"></div>
+    </div>
+    
+</div>
+
+</body>
+</html>

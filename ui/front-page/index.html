@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styles for a greyish background */
+        body {
+            background-color: white /* Greyish background color */
+        }
+
+        nav {
+            background-color: #00C0FC;
+            padding: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .grey-navbar {
+            background-color: #e8e5e5; /* Grey background color */
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            
+        }
+        .oval-shape {
+            width: 85px;
+            height: 25px;
+            background-color: white;
+            border-radius: 50px;
+            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 25px;
+            color: black;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'Rag 123', sans-serif;
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #808080; /* Dropdown background color */
+            border-radius: 5px;
+            display: none;
+        }
+        .oval-shape:hover .dropdown {
+            display: block;
+        }
+        .explore-heading {
+            font-weight: 790;
+            font-size: 30px;
+            margin-left: 15px;
+            font-family: 'Rag 123', sans-serif;
+            margin-top: 25px;
+            color: #333;
+        }
+        .restaurant-card {
+            display: flex;
+        
+        }
+
+        /* Rectangular box styles */
+        .rectangular-box:nth-child(1) {
+            background-image: url('subway.avif');
+            background-size: contain;
+            background-position: center;
+        }
+
+        .rectangular-box:nth-child(2) {
+            background-image: url('bking.avif');
+        }
+
+        .rectangular-box:nth-child(3) {
+            background-image: url('kfc.avif');
+        }
+
+        /* Rectangular box styles */
+        .rectangular-box {
+            width: calc(33.33% - 20px);
+            margin-right: 100px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            height: 35vh;
+            margin-top: 40px;
+            margin-left: 15px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 15px;
+            color: white;
+        }
+
+        /* Added styles for content below the box */
+        .content-below-box {
+            margin-top: 20px;
+            /* text-align: center; */
+            font-family: 'Rag 123', sans-serif;
+            font-weight: 700;
+            margin-left: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+        .content-below-box2{
+            margin-top: -88px;
+            font-family: 'Rag 123', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: #333;
+            margin-left: 530px 
+        }
+        .content-below-box3{
+            margin-top: -88px;
+            font-family: 'Rag 123', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: #333;
+            margin-left: 1040px 
+        }
+        
+
+        .left-below{
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .left-below-below{
+            margin-top: 10px;
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        .right-below{
+            font-weight: lighter;
+            font-size: 18px;
+            /* text-align: right; */
+            margin-left: 350px;
+            margin-top: -69px;
+        }
+        .right-below-below{
+            font-weight: lighter;
+            margin-left: 320px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .time{
+            margin-left: 30px;
+        }
+        
+    </style>
+    <title>PreFoodie</title>
+</head>
+<body>
+    <nav></nav>
+    
+    <div class="grey-navbar">
+        <!-- Oval shapes with text -->
+        <div class="oval-shape">Filters</div>
+        <div class="oval-shape">Rating: 4.0+</div>
+        <div class="oval-shape">Pure Veg</div>
+        <div class="oval-shape">Cuisines
+            <div class="dropdown">
+                <select>
+                    <option value="italian">Italian</option>
+                    <option value="indian">Indian</option>
+                    <option value="chinese">Chinese</option>
+                    
+                </select>
+            </div>
+        </div>
+    </div>
+    <h2 class="explore-heading">Restaurants to explore</h2>
+
+    <!-- Restaurant cards -->
+
+    <div class="restaurant-card">
+        <div class="rectangular-box">
+            
+        </div>
+        <div class="rectangular-box">
+            <!-- Content for the second rectangular box -->
+        </div>
+        <div class="rectangular-box">
+            <!-- Content for the third rectangular box -->
+        </div>
+    </div>
+
+    <!-- Content below the first box -->
+    <div class="content-below-box">
+        <span>
+            <div class = "left-below">
+                Subway
+            </div>
+            <div class= "left-below-below ">
+                <div>
+                    Healthy Food,
+                </div>
+                <div>
+                    Sandwich...
+                </div> 
+            </div>
+        </span>
+        <span>
+            <div class = "right-below">
+                3.7*
+            </div>
+            <div class = "right-below-below">
+                <div>
+                    300 for one
+                </div>
+                <div class = "time">
+                    <em>
+                        19 min
+                    </em>
+                   
+                </div>
+            </div>
+            
+        </span>
+    </div>
+     <!-- Content below the second box -->
+     <div class="content-below-box2">
+        <span>
+            <div class="left-below">
+                Burger King
+            </div>
+            <div class="left-below-below">
+                <div>
+                    Fast Food,
+                </div>
+                <div>
+                    Burgers...
+                </div> 
+            </div>
+        </span>
+        <span>
+            <div class="right-below">
+                4.2*
+            </div>
+            <div class="right-below-below">
+                <div>
+                    250 for one
+                </div>
+                <div class="time">
+                    <em>
+                        25 min
+                    </em>
+                </div>
+            </div>
+        </span>
+    </div>
+    <!-- Content below the third box -->
+    <div class="content-below-box3">
+        <span>
+            <div class="left-below">
+                KFC
+            </div>
+            <div class="left-below-below">
+                <div>
+                    Fried Chicken,
+                </div>
+                <div>
+                    Chicken Wings...
+                </div> 
+            </div>
+        </span>
+        <span>
+            <div class="right-below">
+                4.5*
+            </div>
+            <div class="right-below-below">
+                <div>
+                    350 for one
+                </div>
+                <div class="time">
+                    <em>
+                        30 min
+                    </em>
+                </div>
+            </div>
+        </span>
+    </div>
+    <div class="restaurant-card">
+        <div class="rectangular-box">
+            
+        </div>
+        <div class="rectangular-box">
+            <!-- Content for the second rectangular box -->
+        </div>
+        <div class="rectangular-box">
+            <!-- Content for the third rectangular box -->
+        </div>
+    </div>
+
+    <!-- Content below the first box -->
+    <div class="content-below-box">
+        <span>
+            <div class = "left-below">
+                Subway
+            </div>
+            <div class= "left-below-below ">
+                <div>
+                    Healthy Food,
+                </div>
+                <div>
+                    Sandwich...
+                </div> 
+            </div>
+        </span>
+        <span>
+            <div class = "right-below">
+                3.7*
+            </div>
+            <div class = "right-below-below">
+                <div>
+                    300 for one
+                </div>
+                <div class = "time">
+                    <em>
+                        19 min
+                    </em>
+                   
+                </div>
+            </div>
+            
+        </span>
+    </div>
+     <!-- Content below the second box -->
+     <div class="content-below-box2">
+        <span>
+            <div class="left-below">
+                Burger King
+            </div>
+            <div class="left-below-below">
+                <div>
+                    Fast Food,
+                </div>
+                <div>
+                    Burgers...
+                </div> 
+            </div>
+        </span>
+        <span>
+            <div class="right-below">
+                4.2*
+            </div>
+            <div class="right-below-below">
+                <div>
+                    250 for one
+                </div>
+                <div class="time">
+                    <em>
+                        25 min
+                    </em>
+                </div>
+            </div>
+        </span>
+    </div>
+    <!-- Content below the third box -->
+    <div class="content-below-box3">
+        <span>
+            <div class="left-below">
+                KFC
+            </div>
+            <div class="left-below-below">
+                <div>
+                    Fried Chicken,
+                </div>
+                <div>
+                    Chicken Wings...
+                </div> 
+            </div>
+        </span>
+        <span>
+            <div class="right-below">
+                4.5*
+            </div>
+            <div class="right-below-below">
+                <div>
+                    350 for one
+                </div>
+                <div class="time">
+                    <em>
+                        30 min
+                    </em>
+                </div>
+            </div>
+        </span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styles for a greyish background */
+        body {
+            background-color: #f2f2f2; /* Greyish background color */
+        }
+
+        nav {
+            background-color: rgba(0, 149, 255, 0.58);
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Main container styles */
+        .main-container {
+            display: flex;
+        }
+
+        /* Left container styles */
+        .left-container {
+            width: 12%;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 80vh;
+            border-radius: 10px;
+            margin-left: 15px;
+            margin-top: 15px;
+            margin-bottom: 3px;
+        }
+
+        /* Gray box styles */
+        .gray-box {
+            background-color: #ccc;
+            margin-bottom: 30px;
+            padding: 12px;
+            box-sizing: border-box;
+            width: 115%;
+            margin-top: 0px;
+            height: 14vh;
+            border-radius: 4px;
+            margin-left: -12px;
+        }
+
+        /* Heading styles for gray boxes */
+        .gray-box h2 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        /* Default value styles */
+        .default-value {
+            font-size: 14px;
+        }
+
+        /* Container for the three parts */
+        .three-parts-container {
+            width: 70%; /* Adjust the width as needed */
+            margin-left: 30px; /* Match the margin-left of the left container */
+            display: flex;
+            flex-direction: column; /* Stack the three parts vertically */
+        }
+
+        /* First part styles */
+        .first-part {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        /* Input box styles */
+        .input-box {
+            margin-right: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .input-box input {
+            width: 100%; /* Set the input width to 100% to fill the input-box */
+            padding: 10px; /* Add padding for better appearance */
+            box-sizing: border-box; /* Include padding in the total width */
+            margin-top: 5px;
+            border-radius: 10px;
+            border-color: white;
+            width: 150%;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        .input-box:last-child {
+            margin-right: 0; /* Remove right margin for the last input box */
+        }
+        /* Horizontal line styles */
+        .horizontal-line {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+            width: 109%;
+        }
+
+        /* Second part heading styles */
+        .second-part-heading {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 25px;
+            margin-left: 500px;
+        }
+
+        /* Second part styles */
+        .second-part {
+            margin-bottom: 20px;
+        }
+
+        /* Expected gross sales dropdown box styles */
+        .expected-gross-sales-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .expected-gross-sales-box input{
+            margin-top: 5px;
+            border-radius: 10px;
+            border-color: white;
+            width: 30%;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        /* Third part styles */
+        .third-part {
+            display: flex;
+        
+        }
+
+        /* Rectangular box styles */
+        .rectangular-box {
+            flex: 1;
+            background-color: #ccc;
+            margin-right: 30px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            height: 38vh;
+        }
+    </style>
+    <title>PreFoodie</title>
+</head>
+<body>
+    <nav>
+        <h1>PreFoodie</h1>
+    </nav>
+
+    <!-- Main container -->
+    <div class="main-container">
+
+        <!-- Left container -->
+        <div class="left-container">
+            <!-- Gray boxes with headings and default values -->
+            <div class="gray-box">
+                <h2>No. of Weeks</h2>
+                <p class="default-value">Default Value</p>
+            </div>
+            <div class="gray-box">
+                <h2>Total Sales</h2>
+                <p class="default-value">Default Value</p>
+            </div>
+            <div class="gray-box">
+                <h2>No. of Stores</h2>
+                <p class="default-value">Default Value</p>
+            </div>
+            <div class="gray-box">
+                <h2>Cities Covered</h2>
+                <p class="default-value">Default Value</p>
+            </div>
+        </div>
+
+        <!-- Three parts container -->
+        <div class="three-parts-container">
+
+            <!-- First part -->
+            <div class="first-part">
+                <div>
+                    <h3>Center ID</h3>
+                    <div class="input-box"><input type="text" id="centerId" placeholder="Type your Center ID"></div>
+                </div>
+                <div>
+                    <h3>Meal ID</h3>
+                    <div class="input-box"><input type="text" id="mealId" placeholder="Choose Meal ID"></div>
+                </div>
+                <div>
+                    <h3>Select Week</h3>
+                    <div class="input-box"><input type="text" id="weeks" placeholder="Select Week"></div>
+                </div>
+            </div>
+
+            <!-- Horizontal line -->
+            <div class="horizontal-line"></div>
+
+            <!-- Second part -->
+            <div class="second-part">
+                <h2 class="second-part-heading">Analysis/Prediction</h2>
+                <div class="expected-gross-sales-box">
+                    <h3>Expected Gross Sales</h3>
+                    <input type="text" placeholder="Enter Expected Gross Sales">
+                </div>
+            </div>
+
+            <!-- Third part -->
+            <div class="third-part">
+                <div class="rectangular-box">
+                    <!-- Content for the first rectangular box -->
+                </div>
+                <div class="rectangular-box">
+                    <!-- Content for the second rectangular box -->
+                </div>
+                <div class="rectangular-box">
+                    <!-- Content for the third rectangular box -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
