@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1b484262c8134449a8cc41331ee952c8/artifacts
+end_time: 1706440062081
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1b484262c8134449a8cc41331ee952c8
+run_name: wistful-shad-638
+run_uuid: 1b484262c8134449a8cc41331ee952c8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706440055440
+status: 4
+tags: []
+user_id: Rajeev

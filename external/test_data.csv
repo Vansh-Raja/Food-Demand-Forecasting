@@ -1,0 +1,10 @@
+id,week,center_id,city_code,region_code,center_type,op_area,meal_id,category,cuisine,checkout_price,base_price,emailer_for_promotion,homepage_featured,num_orders
+1379560,1,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,136.83,152.29,0,0,177
+1018704,2,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,135.83,152.29,0,0,323
+1196273,3,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,132.92,133.92,0,0,96
+1116527,4,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,135.86,134.86,0,0,163
+1343872,5,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,146.5,147.5,0,0,215
+1493612,6,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,146.53,146.53,0,0,285
+1110832,7,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,145.53,146.53,0,0,148
+1461167,8,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,146.53,145.53,0,0,135
+1102364,9,55,647,56,TYPE_C,2.0,1885,Beverages,Thai,134.83,134.83,0,0,175

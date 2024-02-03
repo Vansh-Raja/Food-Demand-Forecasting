@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/2b664943a3694e829de16ee84790015c/artifacts
+end_time: 1706440229955
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2b664943a3694e829de16ee84790015c
+run_name: defiant-snake-578
+run_uuid: 2b664943a3694e829de16ee84790015c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1706440209944
+status: 3
+tags: []
+user_id: Rajeev

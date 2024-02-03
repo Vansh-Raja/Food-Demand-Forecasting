@@ -1,0 +1,19 @@
+stages:
+  extract:
+    cmd: python scripts/extract.py
+    outs: 
+    - data/raw/final.csv
+  transform:
+    cmd: python scripts/transform.py
+    deps:
+    - data/raw/final.csv
+    outs:
+    - data/processed/preprocessed_data.csv
+  train:
+    cmd: python scripts/train.py 1
+    deps:
+    - data/processed/preprocessed_data.csv
+  load:
+    cmd: python scripts/load.py
+    deps:
+    - data/processed/preprocessed_data.csv
