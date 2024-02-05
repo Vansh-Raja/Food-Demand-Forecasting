@@ -1,6 +1,0 @@
-Flask
-scikit-learn
-mlflow
-category-encoders
-confluent-kafka
-kafka-python
