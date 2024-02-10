@@ -47,6 +47,7 @@ def pretime():
 
 pretime()
 
+#commenting xb regressor ( explicitly commented xb regressor) 
 """**xb regressor**"""
 
 def prexbreg(train_df):
