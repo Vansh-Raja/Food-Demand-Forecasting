@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting Preface</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../static/Css/preface.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Food Demand Forecasting</h1>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../static/imgs/grill.jpeg" alt="Grilled steak with vegetables" />
+                <div>
+                    <h2>Grilled steak with vegetables</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../static/imgs/pizza.jpeg" alt="Pizza" />
+                <div>
+                    <h2>Pizza</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../static/imgs/egg.jpeg" alt="Sandwich with boiled egg" />
+                <div>
+                    <h2>Sandwich with boiled egg</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../static/imgs/pancake.jpeg" alt="Toast bread with blueberry" />
+                <div>
+                    <h2>Toast bread with blueberry</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../static/imgs/burger.jpeg" alt="Chicken burger" />
+                <div>
+                    <h2>Chicken burger</h2>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: "auto", // Use "auto" 
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 4,
+                    slideShadows: false
+                },
+                keyboard: {
+                    enabled: true
+                },
+                mousewheel: {
+                    thresholdDelta: 70
+                },
+                initialSlide: 0,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2
+                    }
+                }
+            });
+        </script>
+    </div>
+    <a href="{{ url_for('home') }}" class="next-button">Let's Demand Forecast</a>
+    </a>
+    <script>
+        function goToNextSection() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Css/existing.css">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">
+        <h1>Food Demand Forecasting</h1>
+        </a>
+    </div>
+    <div>
+        <form action="">
+            <p class = "second-para">MLFlow Models</p>
+            <label for="selecting model">Select Model</label>
+            <select class = "second-sel" name="selecting_model" id="selecting_model">
+                {% for model in models %}
+                    <option value="{{ model }}">{{ model }}</option>
+                {% endfor %}
+            </select>
+    
+            <label for="selecting version">Select Version</label>
+            <select class = "second-sel" name="selecting_version" id="selecting_version">
+                {% for key in models %}
+                    {% for value in models[key] %}
+                        <option data-key="{{ key }}" value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                {% endfor %}
+            </select>
+    
+            <input class = "second-button" type="submit" value="Predict">
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var keysDropdown = document.getElementById("selecting_model");
+            var valuesDropdown = document.getElementById("selecting_version");
+
+            keysDropdown.addEventListener("change", function() {
+                var selectedKey = keysDropdown.value;
+
+                // Hide all options
+                for (var i = 0; i < valuesDropdown.options.length; i++) {
+                    valuesDropdown.options[i].style.display = 'none';
+                }
+
+                // Show options for the selected key
+                var options = valuesDropdown.querySelectorAll('[data-key="' + selectedKey + '"]');
+                for (var i = 0; i < options.length; i++) {
+                    options[i].style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

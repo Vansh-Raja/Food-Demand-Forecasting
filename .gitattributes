@@ -1,0 +1,7 @@
+*.BestTS filter=lfs diff=lfs merge=lfs -text
+BestTS/* filter=lfs diff=lfs merge=lfs -text
+checkpoint/* filter=lfs diff=lfs merge=lfs -text
+data/* filter=lfs diff=lfs merge=lfs -text
+mlartifacts/* filter=lfs diff=lfs merge=lfs -text
+mlruns/* filter=lfs diff=lfs merge=lfs -text
+TEMPP/*.csv filter=lfs diff=lfs merge=lfs -text

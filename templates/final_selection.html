@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Css/final_selection.css">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">
+        <h1>Food Demand Forecasting</h1>
+        </a>
+    </div>
+    <div>
+        <form method="POST">
+            <p class = "seven-s-para">Train for particluar Meal</p>
+            <div class="form-group">
+                <span class = "left-one">
+                    <input class="third-input" type="text" name="center_id" id="center_id" placeholder="Center ID">
+                </span>
+    
+                <span class = "right-one">
+                    <input class="third-input" type="text" name="meal_id" id="meal_id" placeholder="Meal ID">
+                </span>
+            </div>
+            <input class = "second-button"  id = "one-b" type="submit" value="Predict">
+            
+    
+        </form>
+</body>
+
+</html>

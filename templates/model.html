@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Css/model.css">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">
+        <h1>Food Demand Forecasting</h1>
+        </a>
+    </div>
+    <div>
+        <form method="POST">
+            <label for="selecting model">Select Model</label>
+            <select class="third-sel" name="model_option" id="selecting_model">
+                {% for model in model_options %}
+                    <option value="{{ model }}">{{ model }}</option>
+                {% endfor %}
+            </select>
+    
+            <label for="tuning">Hyperparameter Tuning</label>
+            <select class="third-sel" name="tuning_option" id="selecting_tuning">
+                {% for tuning in tuning_options %}
+                    <option value="{{ tuning }}">{{ tuning }}</option>
+                {% endfor %}
+            </select>
+            {% if btn %}
+                <input class = "second-button" type="submit" value="Next">
+            {% else %}
+            <input class = "second-button" type="submit" value="Select Model">
+            {% endif %}
+        </form>
+</body>
+
+</html>

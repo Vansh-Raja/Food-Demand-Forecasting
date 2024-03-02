@@ -1,0 +1,1 @@
+{"path": "New Data", "kafka_topic": "finald", "kafka_url": "localhost:9092", "model_type": "Regression Models", "null_values": "Mean", "encoding": "Label Encoding", "scaling": "Standard Scaling", "model_id": "XGBoost", "tuning": "Grid Search", "db_type": "sqlite", "db_name": "Temp", "db_url": "Something", "data": "partial", "center_id": "55", "meal_id": "1885"}

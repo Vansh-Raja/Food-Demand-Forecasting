@@ -1,0 +1,167 @@
+* {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../imgs/6.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    transform: translate(0%, -50%);
+    color: black;
+    font-size: 40px;
+    background-color: white;
+    padding: 10px;
+    opacity: 0.8;
+    text-align: left;
+    border-radius: 5px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 535px;
+    width: 35%;
+    margin: auto;
+    margin-top: 10%;
+    opacity: 0.8;
+    margin-left: 55%;
+}
+
+label {
+display: block;
+margin-bottom: 8px;
+color:#333
+}
+
+input[type="file"],
+select,
+input[type="number"],
+input[type="submit"],
+input[type="button"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="button"] {
+background-color: #4caf50;
+color: black;
+cursor: pointer;
+}
+input.one-button{
+margin-top: 50px;
+margin-bottom: 70px;
+height: 45px;
+font-weight: bold;
+font-size: 15px;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+
+h2 {
+margin-top: 30px;
+border-bottom: 2px solid #333;
+padding-bottom: 5px;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+th, td {
+border: 1px solid #ddd;
+padding: 12px;
+text-align: left;
+}
+
+th {
+background-color: #4caf50;
+color: white;
+}
+
+.second-para{
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+}
+
+select.second-sel{
+margin-bottom: 45px;
+}
+
+input.second-button{
+font-weight: bold;
+height: 45px;
+font-size: 17px;
+margin-top: 40px;
+}
+
+.third-input{
+width: 100%;
+padding: 10px;
+margin-bottom: 50px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+select.third-sel{
+margin-bottom: 50px;
+}
+
+#hidden-opts{
+display: block;
+width: 50%;
+margin: auto;
+}
+#hidden-opts a input{
+margin: 10px;
+color: white;
+font-size: 0.8rem;
+font-weight: normal;
+}
+a{
+all: unset;
+}
+
+#one-b{
+width: 15%;
+margin: 0 auto; 
+display: block; 
+text-align: center; 
+}
+
+.s-second-para{
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+margin-top: 50px;
+}
+
+.seven-s-para{
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 50px;
+}

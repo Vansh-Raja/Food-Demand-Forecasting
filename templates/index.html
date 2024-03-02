@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Css/index.css">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">
+        <h1>Food Demand Forecasting</h1>
+        </a>
+    </div>
+    <div>
+        <div class="form">
+        <form>
+            <input class="one-button" type="button" value="New Model" onclick="make_visible()" style="margin-bottom: 20px;">
+            <div id="hidden-opts" style="display: none;">
+                <a href="{{ url_for('new_data') }}">
+                    <input class="one-button" type="button" value="New Data Incoming" onclick="make_visible()">
+                </a>
+                <a href="{{ url_for('new_model_existing_data_preprocessed') }}">
+                    <input class="one-button" type="button" value="Use Existing Preprocessed Data" onclick="make_visible()">
+                </a>
+                <a href="{{ url_for('new_model_existing_data_raw') }}">
+                    <input class="one-button" type="button" value="Use Existing Raw Data" onclick="make_visible()">
+                </a>
+            </div>
+            <a href="{{ url_for('existing_model') }}">
+                <input class="one-button" type="button" value="Existing Model">
+            </a>
+        </form>
+
+        <h3>OR</h3>
+        <h2>Demand Forecast</h2>
+        <form method="POST" action="{{ url_for('bestModel') }}">
+            <input name="center_id" class="third-input" type="text" placeholder="Center ID">
+            <input name="meal_id" class="third-input" type="text" placeholder="Meal ID">
+            
+            <input class="one-button" type="submit" value="Auto Predict">
+        </form>
+        </div>
+    </div>
+    <script>
+        function make_visible() {
+            var x = document.getElementById("hidden-opts");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

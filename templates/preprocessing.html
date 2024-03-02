@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Css/preprocessing.css">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">
+        <h1>Food Demand Forecasting</h1>
+        </a>
+    </div>
+    <div>
+        <a href="{{ url_for('home') }}"></a>
+        <form method="POST">
+            <label for="selecting scaling">Scaling</label>
+            <select class = "second-sel" name="scaling_option" id="selecting_scaling">
+                {% for scaling_option in scaling_options %}
+                    <option value="{{ scaling_option }}">{{ scaling_option }}</option>
+                {% endfor %}
+            </select>
+    
+            <label for="selecting encoding">Encoding</label>
+            <select class = "second-sel" name="encoding_option" id="selecting_encoding">
+                {% for encoding_option in encoding_options %}
+                    <option value="{{ encoding_option }}">{{ encoding_option }}</option>
+                {% endfor %}
+            </select>
+    
+            <label for="selecting missing">Handle Null Values</label>
+            <select class = "second-sel" name="missing_option" id="selecting missing">
+                {% for missing_option in missing_options %}
+                    <option value="{{ missing_option }}">{{ missing_option }}</option>
+                {% endfor %}
+            </select>
+            
+            {% if btn %}
+                <input class = "second-button" type="submit" value="Submit">
+            {% else %}
+            <input class = "second-button" type="submit" value="Next">
+            {% endif %}
+        </form>
+    </div>
+</body>
+
+</html>

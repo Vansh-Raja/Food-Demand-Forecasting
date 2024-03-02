@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost&family=Libre+Baskerville&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Css/database.css">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">
+        <h1>Food Demand Forecasting</h1>
+        </a>
+    </div>
+    <div>
+        <form method="POST">
+            <label for="database selection">Database Selection</label>
+            <select class="third-sel" name="selecting_database" id="selecting_database">
+                <option value="mongo">Mongo DB</option>
+                <option value="sqlite">Sqlite</option>
+            </select>
+    
+            <label for="database name">Database Name</label>
+            <input class="third-input" type="text" name="database_name" id="database_name" placeholder="Database Name">
+    
+            <label for="sql_mongo" id="sql_mongo_label">SQLite Table Name</label>
+            <input class="third-input" type="text" name="sql_mongo" id="sql_mongo_input">
+        
+            <input class="second-button" type="submit" value="Submit">
+        </form>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var selectElement = document.getElementById("selecting_database");
+                var labelElement = document.getElementById("sql_mongo_label");
+                var inputElement = document.getElementById("sql_mongo_input");
+    
+                selectElement.addEventListener("change", function() {
+                    var selectedOption = selectElement.value;
+                    if (selectedOption === "sqlite") {
+                        labelElement.textContent = "SQLite Table Name";
+                        inputElement.placeholder = "Enter SQLite Table Name";
+                    } else if (selectedOption === "mongo") {
+                        labelElement.textContent = "MongoDB Collection Name";
+                        inputElement.placeholder = "Enter MongoDB Collection Name";
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>
