@@ -4,13 +4,13 @@
 In the realm of meal delivery, delivery centers often face the challenge of unpredictable demand, impacting raw material procurement and staffing. The solution? Accurate Demand Forecasting. Our project aims to provide a solution by predicting the demand for different meal types in upcoming weeks based on various parameters.
 
 ## Developers
-- Vansh Raja
-- Pranav Tyagi
-- Ayush Bhatt
-- Kunal Paliwal
-- Arnav Gupta
-- Rishabh Sharma
-- Shreyansh Negi
+- [Vansh Raja](https://github.com/vansh-raja)
+- [Pranav Tyagi](https://github.com/PranavTyagi-3)
+- [Ayush Bhatt](https://github.com/AyushB21)
+- [Kunal Paliwal](https://github.com/kunalpaliwal13)
+- [Arnav Gupta](https://github.com/arrnavgg)
+- [Rishabh Sharma](https://github.com/rishabh301)
+- [Shreyansh Negi](https://github.com/Shreyanshnegi13)
 
 ## Tools & Libraries Used
 - PowerBI & Tableau
